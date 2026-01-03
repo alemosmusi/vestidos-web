@@ -9,7 +9,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es">
-      <body className="pt-20">
+      <body className="pt-15">
         <Navbar />
         {children}
       </body>
