@@ -2,7 +2,7 @@
 
 export default function Footer() {
   return (
-    <footer className="bg-white border-t border-black/10">
+    <footer className="bg-gray-50">
       <div className="max-w-7xl mx-auto px-6 py-16 flex flex-col md:flex-row items-center justify-between gap-8">
         
         {/* Marca */}

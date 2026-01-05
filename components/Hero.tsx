@@ -39,7 +39,6 @@ export default function Hero() {
   }, [scrollYProgress]);
 
   // Detectar móvil
-  const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
 
   return (
     <>
@@ -57,7 +56,8 @@ export default function Hero() {
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: progress > 0.08 ? 1 : 0, y: progress > 0.08 ? 0 : 10 }}
                   transition={{ duration: 0.4, ease: "easeOut" }}
-                  className="mt-4 text-xs uppercase tracking-widest text-black/60"
+                  className="mt-6 text-[11px] uppercase tracking-[0.3em] text-black/50 font-sans"
+
                 >
                   Colección 2026
                 </motion.p>
@@ -66,7 +66,8 @@ export default function Hero() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: progress > 0.16 ? 1 : 0, y: progress > 0.16 ? 0 : 20 }}
                   transition={{ duration: 0.6, ease: "easeOut" }}
-                  className="mt-8 text-sm md:text-base text-black/70 tracking-wide max-w-md"
+                  className="mt-10 text-sm md:text-base text-black/70 leading-relaxed max-w-md font-sans"
+
                 >
                   Vestidos pensados para acompañarte en cada movimiento.
                   Diseño atemporal, telas nobles y una silueta que habla por vos.
@@ -87,10 +88,11 @@ export default function Hero() {
             </div>
           </motion.div>
         </div>
+        <div className="pointer-events-none absolute bottom-0 left-0 w-full h-32 bg-gradient-to-b from-white to-gray-50" />
       </section>
 
       {/* NextSection: en móvil siempre visible, en desktop según fadeProgress */}
-      <NextSection fadeProgress={isMobile ? 0 : fadeProgress} />
+      <NextSection />
     </>
   );
 }

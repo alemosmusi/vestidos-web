@@ -1,7 +1,19 @@
-import Footer from "@/components/Footer";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import type { ReactNode } from "react";
+import { Inter, Playfair_Display } from "next/font/google";
+
+/* ✅ FUENTES DECLARADAS FUERA DEL COMPONENTE */
+const sans = Inter({
+  subsets: ["latin"],
+  variable: "--font-sans",
+});
+
+const serif = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-serif",
+});
 
 export default function RootLayout({
   children,
@@ -10,7 +22,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es">
-      <body className="pt-15 bg-white text-black">
+      <body className={`${sans.variable} ${serif.variable} font-sans pt-15`}>
         <Navbar />
         {children}
         <Footer />
