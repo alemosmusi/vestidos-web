@@ -88,7 +88,8 @@ export default function Hero() {
             </div>
           </motion.div>
         </div>
-        <div className="pointer-events-none absolute bottom-0 left-0 w-full h-32 bg-gradient-to-b from-white to-gray-50" />
+        <div className="pointer-events-none absolute bottom-0 left-0 w-full h-12 bg-gradient-to-b from-white to-gray-50" />
+
       </section>
 
       {/* NextSection: en móvil siempre visible, en desktop según fadeProgress */}

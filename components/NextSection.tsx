@@ -27,7 +27,7 @@ export default function NextSection() {
 
 
   return (
-    <section className="relative min-h-screen bg-gray-50 flex flex-col items-center justify-center px-6 pt-16 md:pt-32">
+    <section className="relative min-h-screen bg-gray-50 flex flex-col items-center justify-center px-6 md:pt-8">
       {/* Título y descripción */}
       <motion.div
   initial={{ opacity: 0, y: 50 }}
