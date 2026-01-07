@@ -3,6 +3,7 @@ import Navbar from "components/Navbar";
 import Footer from "components/Footer";
 import type { ReactNode } from "react";
 import { Inter, Playfair_Display } from "next/font/google";
+import FloatingWhatsApp from "components/FloatingWhatsapp";
 
 /* ✅ FUENTES DECLARADAS FUERA DEL COMPONENTE */
 const sans = Inter({
@@ -25,6 +26,7 @@ export default function RootLayout({
       <body className={`${sans.variable} ${serif.variable} font-sans pt-15`}>
         <Navbar />
         {children}
+        <FloatingWhatsApp />
         <Footer />
       </body>
     </html>

@@ -39,7 +39,7 @@ export default function NextSection() {
       </motion.div>
 
       {/* Cards */}
-      <motion.div
+      {/* <motion.div
         variants={container}
         initial="hidden"
         whileInView="show"
@@ -65,8 +65,43 @@ export default function NextSection() {
             </h3>
           </motion.div>
         ))}
-      </motion.div>
+      </motion.div> */}
 
+
+          {/* Cards */}
+<motion.div
+  variants={container}
+  initial="hidden"
+  whileInView="show"
+  viewport={{ once: true, amount: 0.2 }}
+  className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 w-full max-w-7xl"
+>
+  {visibleVestidos.map((v) => (
+    <Link
+      key={v.id}
+      href={`/catalogo/${v.id}`}
+      className="group"
+    >
+      <motion.div
+        variants={item}
+        transition={{ duration: 0.5, ease: "easeOut" }}
+        className="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow flex flex-col items-center p-4 cursor-pointer"
+      >
+        <Image
+          src={v.imagen}
+          alt={v.nombre}
+          width={260}
+          height={380}
+          className="object-contain group-hover:scale-[1.02] transition-transform"
+        />
+
+        <h3 className="mt-6 text-sm uppercase tracking-widest text-black/70 font-sans">
+          {v.nombre}
+        </h3>
+      </motion.div>
+    </Link>
+  ))}
+</motion.div>
       {/* Botón catálogo */}
       {hasMore && (
   <motion.div
