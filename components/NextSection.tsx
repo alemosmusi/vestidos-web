@@ -111,7 +111,7 @@ export default function NextSection() {
     transition={{ duration: 0.5, ease: "easeOut" }}
     className="mt-16"
   >
-    <a
+    <link
       href="/catalogo"
       className="
         inline-block
@@ -124,7 +124,7 @@ export default function NextSection() {
       "
     >
       Ver catálogo completo
-    </a>
+    </link>
   </motion.div>
 )}
 
